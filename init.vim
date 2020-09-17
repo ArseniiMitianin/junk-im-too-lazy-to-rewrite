@@ -1,3 +1,5 @@
+" I couldn't find whose Nvim setup script I've used as a base, unfortunately :(
+
 " Autoinstall Vim-Plug {
 if empty(glob('~/.config/nvim/site/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -42,7 +44,7 @@ set number          " Show line numbers
 set showcmd         " Show command line on the bottom
 set wildmenu        " Visual autocompletion for the command menu
 set showmatch       " Highlight matching braces
-set laststatus=2  " Window always shows the status line
+set laststatus=2    " Window always shows the status line
 " } UI Config
 
 " Search {
