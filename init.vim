@@ -1,8 +1,8 @@
 " I couldn't find whose Nvim setup script I've used as a base, unfortunately :(
 
 " Autoinstall Vim-Plug {
-if empty(glob('~/.config/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.config/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall
 endif
 " } Autoinstall Vim-Plug
@@ -14,15 +14,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'itchyny/lightline.vim'
 Plug 'townk/vim-autoclose'
 Plug 'sheerun/vim-polyglot'
-Plug 'sainnhe/edge'
 
 call plug#end()
 " } Plugins
-
-let g:edge_style = 'aura'
-let g:edge_enable_italic = 0
-let g:edge_disable_italic_comment = 1
-colorscheme edge
 
 " Colors {
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
