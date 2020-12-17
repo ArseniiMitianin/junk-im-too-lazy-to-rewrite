@@ -98,17 +98,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls --color=auto'
-alias ip='ip -color=auto'
-
-alias vol="volatility -f /home/mitianin/Desktop/Forensics/In-Class\ Exercise\ 2/991328625.raw --profile=VistaSP1x86"
-
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
+[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
