@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Shortcuts
-alias rank-mirrors='sudo reflector -p https --verbose --latest 20 --download-timeout 60 --sort rate --save /etc/pacman.d/mirrorlist'
+alias rank-mirrors='sudo reflector -p https --verbose --latest 10 --download-timeout 60 --sort rate --save /etc/pacman.d/mirrorlist'
 
 # Colors
 alias ls='ls --color=auto'    
@@ -10,7 +10,7 @@ alias ip='ip -color=auto'
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \  
+    LESS_TERMCAP_se=$'\e[0m' \
     LESS_TERMCAP_so=$'\e[01;44;33m' \
     LESS_TERMCAP_ue=$'\e[0m' \
     LESS_TERMCAP_us=$'\e[01;32m' \
