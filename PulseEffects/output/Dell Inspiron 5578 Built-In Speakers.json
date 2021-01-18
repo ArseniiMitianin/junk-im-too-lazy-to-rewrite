@@ -543,7 +543,7 @@
             "state": "true",
             "input-gain": "5.5",
             "output-gain": "0",
-            "kernel-path": "\/home\/mitianin\/.config\/PulseEffects\/irs\/Dell Inspiron 5578 + Waves MaxxAudio Pro (No Bass) Built-In Centered 32-bit PCM.irs",
+            "kernel-path": "\/home\/mitianin\/.config\/PulseEffects\/irs\/MaxxAudio Lite ((128K MP3)) 4.Gaming.irs",
             "ir-width": "100"
         },
         "crystalizer": {
