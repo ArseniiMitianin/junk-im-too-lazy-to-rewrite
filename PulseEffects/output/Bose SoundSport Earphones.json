@@ -33,15 +33,15 @@
         "plugins_order": [
             "convolver",
             "equalizer",
-            "limiter",
             "autogain",
+            "crystalizer",
+            "limiter",
             "gate",
             "multiband_gate",
             "compressor",
             "multiband_compressor",
             "bass_enhancer",
             "exciter",
-            "crystalizer",
             "stereo_tools",
             "reverb",
             "delay",
@@ -547,7 +547,7 @@
             "ir-width": "100"
         },
         "crystalizer": {
-            "state": "false",
+            "state": "true",
             "aggressive": "false",
             "input-gain": "0",
             "output-gain": "0",
@@ -618,12 +618,12 @@
             }
         },
         "autogain": {
-            "state": "false",
+            "state": "true",
             "detect-silence": "false",
             "use-geometric-mean": "true",
             "input-gain": "0",
             "output-gain": "0",
-            "target": "-23",
+            "target": "-8.5",
             "weight-m": "1",
             "weight-s": "1",
             "weight-i": "1"
