@@ -33,9 +33,9 @@
         "plugins_order": [
             "convolver",
             "equalizer",
+            "limiter",
             "autogain",
             "crystalizer",
-            "limiter",
             "gate",
             "multiband_gate",
             "compressor",
@@ -359,7 +359,7 @@
             "makeup": "0"
         },
         "limiter": {
-            "state": "false",
+            "state": "true",
             "input-gain": "0",
             "limit": "0",
             "lookahead": "5",
@@ -541,9 +541,9 @@
         },
         "convolver": {
             "state": "true",
-            "input-gain": "5.5",
+            "input-gain": "3",
             "output-gain": "0",
-            "kernel-path": "\/home\/mitianin\/.config\/PulseEffects\/irs\/MaxxAudio Lite ((128K MP3)) 4.Gaming.irs",
+            "kernel-path": "\/home\/mitianin\/.config\/PulseEffects\/irs\/Dell Inspiron 5578 Built-In.irs",
             "ir-width": "100"
         },
         "crystalizer": {
@@ -623,7 +623,7 @@
             "use-geometric-mean": "true",
             "input-gain": "0",
             "output-gain": "0",
-            "target": "-23",
+            "target": "-9",
             "weight-m": "1",
             "weight-s": "1",
             "weight-i": "1"
