@@ -1,11 +1,43 @@
-#!/bin/sh
+#!/bin/zsh
 
-# Shortcuts
-alias rank-mirrors='sudo reflector -p https --verbose --latest 10 --download-timeout 60 --sort rate --save /etc/pacman.d/mirrorlist'
+# Shortcuts and substitutions
+alias rank-mirrors="sudo reflector -p https --verbose --latest 10 --download-timeout 60 --sort rate --save /etc/pacman.d/mirrorlist" \
+      start-ssh-agent='eval "$(ssh-agent -s)"' \
+      yay="paru" \
+      cp="cp -iv" \
+      rm="rm -iv" \
+      mv="mv -iv"
+
+# Big thanks to Sayan Ghosh
+# Package Extractor
+# Usage: unpack <archive name here>
+unpack() {
+    if [ -f "$1" ]; then
+        case $1 in
+            *.tar.bz2)   tar xvjf "$1"      ;;
+            *.tar.gz)    tar xvzf "$1"      ;;
+            *.bz2)       bunzip2 -v "$1"    ;;
+            *.rar)       unrar x "$1"       ;;
+            *.gz)        gunzip -v "$1"     ;;
+            *.tar)       tar xvf "$1"       ;;
+            *.tbz2)      tar xvjf "$1"      ;;
+            *.tgz)       tar xvzf "$1"      ;;
+            *.zip)       unzip -v "$1"      ;;
+            *.Z)         uncompress -v "$1" ;;
+            *.7z)        7z x "$1"          ;;
+            *.ova)       tar xvf "$1"       ;;
+            *)           echo "'$1': cannot be extracted via unpack()" ;;
+        esac
+    elif [ -z "$1" ]; then
+        echo "No files given for unpacking"
+    else
+        echo "'$1': not a valid file"
+    fi
+}
 
 # Colors
-alias ls='ls --color=auto'    
-alias ip='ip -color=auto'
+alias ls='ls --color=auto' \
+      ip='ip -color=auto'
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
