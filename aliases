@@ -22,7 +22,7 @@ unpack() {
             *.tar)       tar xvf "$1"       ;;
             *.tbz2)      tar xvjf "$1"      ;;
             *.tgz)       tar xvzf "$1"      ;;
-            *.zip)       unzip -v "$1"      ;;
+            *.zip)       unzip "$1"         ;;
             *.Z)         uncompress -v "$1" ;;
             *.7z)        7z x "$1"          ;;
             *.ova)       tar xvf "$1"       ;;
