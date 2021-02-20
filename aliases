@@ -14,18 +14,29 @@ alias rank-mirrors="sudo reflector -p https --verbose --latest 10 --download-tim
 unpack() {
     if [ -f "$1" ]; then
         case $1 in
-            *.tar.bz2)   tar xvjf "$1"      ;;
-            *.tar.gz)    tar xvzf "$1"      ;;
-            *.bz2)       bunzip2 -v "$1"    ;;
-            *.rar)       unrar x "$1"       ;;
-            *.gz)        gunzip -v "$1"     ;;
-            *.tar)       tar xvf "$1"       ;;
-            *.tbz2)      tar xvjf "$1"      ;;
-            *.tgz)       tar xvzf "$1"      ;;
-            *.zip)       unzip "$1"         ;;
-            *.Z)         uncompress -v "$1" ;;
-            *.7z)        7z x "$1"          ;;
-            *.ova)       tar xvf "$1"       ;;
+            *.7z)        7z x "$1"           ;;
+            *.br)        unbrotli -v "$1"    ;;
+            *.bz2)       bunzip2 -v "$1"     ;;
+            *.gz)        gunzip -v "$1"      ;;
+            *.lz4)       lz4 -dv "$1"        ;;
+            *.ova)       tar xvf "$1"        ;;
+            *.rar)       unrar x "$1"        ;;
+###############################################
+            *.tar)       tar xvf "$1"        ;;
+            *.tar.bz2)   tar xvjf "$1"       ;;
+            *.tbz2)      tar xvjf "$1"       ;;
+            *.tar.gz)    tar xvzf "$1"       ;;
+            *.tgz)       tar xvzf "$1"       ;;
+            *.tar.lz4)   tar xvf --lzma "$1" ;;
+            *.tlz4)      tar xvf --lzma "$1" ;;
+            *.tar.xz)    tar xvJf "$1"       ;; 
+            *.txz)       tar xvJf "$1"       ;;
+            *.tar.zst)   tar xvf --zstd "$1" ;;
+            *.tzst)      tar xvf --zstd "$1" ;;
+###############################################
+            *.xz)        unxz -v "$1"        ;;
+            *.zip)       unzip "$1"          ;;
+            *.Z)         uncompress -v "$1"  ;;
             *)           echo "'$1': cannot be extracted via unpack()" ;;
         esac
     elif [ -z "$1" ]; then
